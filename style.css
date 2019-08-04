@@ -17,14 +17,17 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
   height: 100vh;
   background: url(img/bg.jpg) rgba(255, 255, 255, 0.3) repeat-x;
   background-blend-mode: color;
+  background-size: contain;
   position: relative;
   overflow: hidden;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1400px;
-  height: 100%;
+  min-height: 100%;
   margin: 0 auto;
   background-color: #F6F6F6;
   -webkit-box-shadow: 0px 0px 12px 0px white;
@@ -182,6 +185,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex: 1 0 auto;
 }
 
 .navigation {
@@ -275,6 +279,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 /*==== FOOTER ====*/
 
 .footer {
+  flex: 0 0 auto;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -288,8 +293,8 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
+/*  position: absolute;
+  bottom: 0;*/
 }
 
 .footer__icon-text {
@@ -588,14 +593,22 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 
 
 @media screen and (max-width: 768px) {
+  .wrapper {
+    overflow-y: visible;
+  }
+
   .content__resume {
-    display: none;
-    margin: 45px;
+    margin: 5px;
     text-align: center;
   }
 }
 
 @media screen and (max-width: 1024px) {
+
+  .wrapper {
+    overflow-y: visible;
+  }
+
   .page {
     display: flex;
     flex-direction: column;
