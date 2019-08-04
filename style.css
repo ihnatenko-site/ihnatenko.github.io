@@ -93,6 +93,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
   position: absolute;
   top:40px;
   right: -999%;
+  z-index: 10;
   opacity: 0;
   transition: opacity .3s linear;
 }
@@ -267,10 +268,6 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
   border-radius: 6px 0 0 6px;
 }
 
-/*.navigation__button:hover .navigation__text-2 {
-  font-size: 15px;
-}*/
-
 .navigation__button:hover .navigation__img {
   transform: rotate(360deg);
 }
@@ -366,10 +363,10 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
   margin-bottom: 100px;
   padding: 0 40px 0;
   font-family: 'FiraSans', sans-serif;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 300;
   overflow: auto;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .content__resume-btn {
@@ -590,30 +587,81 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 
 
 
+@media screen and (max-width: 768px) {
+  .content__resume {
+    display: none;
+    margin: 45px;
+    text-align: center;
+  }
+}
 
+@media screen and (max-width: 1024px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+  }
 
-/*
-@media screen and (min-width: 0) {
   .navigation {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+  .navigation__item {
+    display: flex;
+    justify-content: space-around;
+  }
+
+   .about {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .content__text {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .content__title {
+    text-align: center;
+    font-size: 45px;
     padding: 0;
   }
-  .content__photo-main {
-    margin-left: 3rem;
+
+  .content__description {
+    padding: 0;
+    margin: 0;
+    line-height: 2;
+    font-size: 24px;
   }
-  html {
-   overflow: scroll;
-    }
-    .navigation__item {
-      display: inline;
-    }
-  }*/
+
+  .content__resume {
+    margin: 65px 0;
+    text-align: center;
+  }
+
+  .content__resume-btn {
+    margin: 0;
+    font-size: 22px;
+    padding: 10px 20px 10px 50px;
+  }
+
+  .content__photo-main {
+    width: 25rem;
+  }
+}
 
 
-/*@media screen and (max-width: 800px) {
-  .content {
-    display: block;
+
+
+
+/*@media screen and (max-width: 414px) {
+  .content__description {
+    line-height: 1.5;
+    font-size: 23px;
   }
-  .content__photo-main {
-    margin-left: 5rem;
-  }
-*/
+}*/
