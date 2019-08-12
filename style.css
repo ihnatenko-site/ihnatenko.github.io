@@ -554,54 +554,85 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 .portfolio {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .portfolio__inner {
-  padding: 0 35px 0 21px;
-  width: 100%;
-  height: 700px;
+  margin: 0 auto;
+  width: 88%;
+  height: 88%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: row;
+  justify-content: space-around;
 }
 
 .portfolio-block {
-  width: 30%;
+  width: 26%;
   height: 49%;
-  border: 1px solid black;
+  border: 1px solid #80BCCF;
   border-radius: 8%;
   overflow: hidden;
 }
 
-.portfolio-block-top {
-  height: 70%;
-  background-color: red;
+.portfolio-block__previev {
+  height: 75%;
+  border-bottom: 1px solid #C0C0C0;
 }
 
-.portfolio-block-bottom {
-   height: 30%;
-   background-color: gray;
+.portfolio-block__description {
+   height: 25%;
+   background-color: white/*#DDF3F9*/;
 }
 
-
-.portfolio-block:not(.last) {
-  margin-bottom: 40px;
+.description-name, .description {
+  padding-top: 8px;
+  padding-left: 18px;
 }
 
+.portfolio-text {
+  width: 91%;
+  margin: 0 auto;
+}
 
+.description-name {
+  color: #2694B5;
+  font-size: 22px;
+}
 
+.description {
+  color: #8C888B;
+  font-style: italic;
+  font-size: 18px;
+}
 
-@media screen and (max-width: 768px) {
-  .wrapper {
-    overflow-y: visible;
-  }
+.portfolio-block__image {
+  height: 100%;
+  width: 100%;
+}
 
-  .content__resume {
-    margin: 5px;
+.portfolio-block {
+  margin-bottom: 30px;
+}
+
+.content__title-portfolio {
+    margin-bottom: 12px;
+    font-family: 'FiraSans', sans-serif;
+    color: #414141;
+    font-size: 30px;
+    font-weight: 700;
     text-align: center;
-  }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1024px) {
 
@@ -666,6 +697,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
   .content__photo-main {
     width: 25rem;
   }
+
   /*page-2*/
   .career {
     width: 100%;
@@ -686,16 +718,31 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
     height: 125px;
     font-size: 20px
   }
+
+  .content_before:before {
+    height: 75%;
+  }
+
+  .portfolio-block {
+    width: 37%;
+ }   
 }
 
-
-
-
-
-
-/*@media screen and (max-width: 414px) {
-  .content__description {
-    line-height: 1.5;
-    font-size: 23px;
+@media screen and (max-width: 768px) {
+  .wrapper {
+    overflow-y: visible;
   }
-}*/
+
+  .content_before:before {
+    height: 75%;
+  }
+  
+  .content__photo {
+    margin-bottom: 50px;
+  }
+
+  .portfolio-block {
+    width: 51%;
+}
+
+}
